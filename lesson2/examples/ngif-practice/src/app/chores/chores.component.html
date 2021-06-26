@@ -4,6 +4,7 @@
         <li *ngFor = 'let chore of chores'>{{chore}}</li>
     </ul>
 </div>
+<p *ngIf = "chores.length > finishedChores.length">Work Harder!</p>
 <hr>
 <div class="doneChores">
     <h3>Done Chores</h3>
@@ -11,4 +12,20 @@
         <li *ngFor = 'let done of finishedChores'>{{done}}</li>
     </ul>
 </div>
+<p ngIf ="chores.length = 0 || finishedChores.length - chores.length => 3">{{targetImage}}</p>
 <hr>
+
+<ng-template #></ng-template>
+
+
+
+// If the chores array is empty OR the finishedChores array has at least 3 more items than the 
+// chores array, display targetImage under the Done Chores list. Otherwise, use a p tag to display 
+// the text, "No allowance yet."// 
+
+// Return to chores.component.ts and change the number of items in 
+// the arrays again. Check to make sure the web page correctly responds to your changes.
+
+// Finally, if the chores array is empty AND finishedChores contains 4 or more items, display 
+// an h1 underneath the lists with the text "Ice cream treat!" Otherwise, display h3 and p elements 
+// that describe how to earn ice cream.
